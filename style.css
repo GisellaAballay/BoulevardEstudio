@@ -70,6 +70,22 @@ p {
 }
 
 /* BARRA DE NAVEGACION */
+.logoCorto{
+  height: 50px;
+}
+
+.menu-logo{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1002;
+  display: none;
+}
+
+.logo-responsive{
+  height: 40px;
+}
+
 .navbar {
   float: right;
   background-color: var(--green-accent);
@@ -81,6 +97,7 @@ p {
   list-style: none;
   display: flex;
   gap: 1rem;
+  background-color: var(--green-accent);
 }
 
 .list__item a {
@@ -157,7 +174,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #111;
+    background-color: var(--green-accent);
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -165,8 +182,9 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 2rem;
+    padding: 4rem 2rem 2rem 2rem; /*margen arriba para dejar espacio al log */
     z-index: 1000;
+    box-sizing: border-box;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     opacity: 0;
@@ -187,9 +205,25 @@ p {
     transform: translateX(0);
   }
 
+  .list__item{
+    margin: 1rem 0;
+  }
+  .list__item a {
+    color: #011;
+  }
   .navbar__list .list__item {
     margin: 0.5rem 0;
   }
+
+  .navbar.open .icon-bar::before{
+    content: "X";
+  }
+
+  .menu-logo{
+    display: block;
+  }
+
+
 }
 
  
