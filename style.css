@@ -74,6 +74,7 @@ p {
   float: right;
   background-color: var(--green-accent);
   padding: 10px 0;
+  position: relative;
 }
 
 .navbar__list {
@@ -134,6 +135,7 @@ p {
   top: 1rem;
   right: 1rem;
   z-index: 1001;
+  color: #fff;
 }
 
 .navbar-toggle .icon-bar::before{
@@ -145,18 +147,26 @@ p {
   content: "X";
 }
 
+.icon-bar {
+  font-size: 2rem;
+}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .navbar__list{
     flex-direction: column;
-    background-color: #fff;
-    width: 70%;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
     display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    z-index: 1000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     opacity: 0;
