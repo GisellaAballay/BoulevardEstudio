@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
-  <title>Boulevard</title>
+  <title>Boulevard Estudio</title>
 </head>
 <body>
   <dialog >
@@ -27,80 +27,76 @@
       <!-- IMAGEN/VIDEO DE FONDO -->
     </div>
   </dialog>
-  <header>
-    <img src="./assets/img/Logo Boulevar solo letra blanco.png" alt="Logo del estudio" class="logoCompleto">
-    <button class="navbar-toggle" id="toggleButton" aria-label="Abrir menú">
-      <span class="icon-bar"></span>
+  <header class="header">
+    <div class="logo">
+      <img src="./assets/img/Logo Boulevar solo letra blanco.png" alt="Logo del estudio" class="logoCompleto">
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
-    <nav class="navbar" id="navbar">
+    <!-- <button class="navbar-toggle" id="toggleButton" aria-label="Abrir menú">
+      <span class="icon-bar"></span>
+    </button> -->
+    <nav class="navbar">
       <ul class="navbar__list" id="navList">
         <li class="menu-logo"><img src="./assets/img/Logo Blvd sin fondo negro.png" alt="logo responsive" class="logo-responsive"></li>
-        <li class="list__item submenu">
+        <li class="list__item submenu" data-img="/assets/img/incioItem.jpg">
           <a href="#">Inicio</a>
-          <div class="mega-menu" style="--bg-image: url('ruta-a-imagen-inicio.jpg')">
-            <div class="mega-menu__content">
+          <div class="mega-menu">
               <ul class="submenu__item">
                 <li><a href="#">Bienvenid@s</a></li>
                 <li><a href="#">Texto opcional o botones.</a></li>
               </ul>
-            </div>
+          </div>
         </li>
-        <li class="list__item submenu">
+        <li class="list__item submenu" data-img="/assets/img/sobremiItem.jpg">
           <a href="#">Sobre mi</a>
-          <div class="mega-menu" style="--bg-image: url('ruta-a-imagen-inicio.jpg')">
-            <div class="mega-menu__content">
+          <div class="mega-menu">
               <ul class="submenu__item">
                 <li><a href="#">Historia</a></li>
                 <li><a href="#">Filosofía</a></li>
                 <li><a href="#">Fundadora</a></li>
                 <li><a href="#">Nuestro equipo</a></li>
               </ul>
-            </div>
           </div>
         </li>
-        <li class="list__item submenu">
+        <li class="list__item submenu" data-img="/assets/img/capacitacionItem.jpg">
           <a href="#">Capacitación</a>
-          <div class="mega-menu" style="--bg-image: url('ruta-a-imagen-inicio.jpg')">
-            <div class="mega-menu__content">
+          <div class="mega-menu" >
               <ul class="submenu__item">
                 <li><a href="#">Infantiles</a></li>
                 <li><a href="#">Adultos</a></li>
                 <li><a href="#">Summers</a></li>
               </ul>
-            </div>
           </div>
         </li>
-        <li class="list__item submenu">
+        <li class="list__item submenu" data-img="/assets/img/muestrasdeescenarioItem.jpg">
           <a href="#">Muestras en escenario</a>
-          <div class="mega-menu" style="--bg-image: url('ruta-a-imagen-inicio.jpg')">
-            <div class="mega-menu__content">
+          <div class="mega-menu" >
               <ul class="submenu__item">
                 <li><a href="">Muestra año 2023</a></li>
                 <li><a href="">Mercado de las almas 2024</a></li>
               </ul>
-            </div>
           </div>
         </li>
-        <li class="list__item submenu">
+        <li class="list__item submenu" data-img="/assets/img/galeriaItem.jpg">
           <a href="">Galeria</a>
-          <div class="mega-menu" style="--bg-image: url('ruta-a-imagen-inicio.jpg')">
-            <div class="mega-menu__content">
+          <div class="mega-menu" >
               <ul class="submenu__item">
                 <li><a href="">Bailarines</a></li>
                 <li><a href="">Nuestro espacio</a></li>
               </ul>
-            </div>
           </div>
         </li>
-        <li class="list__item submenu">
+        <li class="list__item submenu" data-img="/assets/img/contactenosItem.jpg">
           <a href="">Contacto</a>
           <div class="mega-menu">
-            <div class="mega-menu__content">
               <ul class="submenu__item">
                 <li><a href="">Contacténos</a></li>
                 <li><a href="">Descripcion u opciones</a></li>
               </ul>
-            </div>
           </div>
         </li>
       </ul>
@@ -111,6 +107,9 @@
     </nav> -->
     
   </header>
+
+  <div class="menu-background"></div>
+  
   <main>
     <h1>Estudio de danza</h1>
     <section id="aboutme">
@@ -289,6 +288,10 @@
     </div>
   </footer>
 
+
+
+  <script src="/js/main.js"></script>
+<!-- 
   <script>
     const toggleBtn = document.getElementById("toggleButton");
     const navList = document.getElementById("navList");
@@ -297,6 +300,6 @@
       navList.classList.toggle("show");
       toggleBtn.classList.toggle("active");
     })
-  </script>
+  </script> -->
 </body>
 </html>
