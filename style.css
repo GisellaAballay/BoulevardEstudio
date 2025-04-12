@@ -3,6 +3,7 @@
   --green-accent: #1a572f;
   --text-light: #f0f0f0;
   --hover-yellow: #fd0;
+  --bg-image: url('/assets/img/bailarinavestidorojo.jpg');
 }
 
 *{
@@ -173,6 +174,39 @@ p {
 
 .icon-bar {
   font-size: 2rem;
+}
+
+/* MEGAMENU */
+.mega-menu {
+  position: relative;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  overflow: hidden;
+  background: var(--bg-image) no-repeat center center / cover;
+  transition: height 0.5s ease;
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mega-menu__content {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 2rem;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.submenu:hover .mega-menu {
+  height: 70vh;
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* RESPONSIVE */
