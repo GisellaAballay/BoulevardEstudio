@@ -94,24 +94,26 @@ p {
 .navbar {
   float: right;
   background-color: var(--green-accent);
-  padding: 10px 0;
+  padding: 1rem 2rem;
   position: relative;
+  z-index: 1000;
 }
 
 .navbar__list {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   background-color: var(--green-accent);
+  justify-content: center;
 }
 
 .list__item a {
   color: var(--text-light);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   position: relative;
   padding: 0.5rem 0;
-  transition: all 0.3s ease;
+  transition: color 0.3s;
 }
 
 .list__item a:hover {
