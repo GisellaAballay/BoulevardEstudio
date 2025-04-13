@@ -208,20 +208,6 @@ p {
   pointer-events: all;
   display: block;
 }
-/* FONDO CAMBIANTE */
-/* .menu-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-  z-index: 0;
-} */
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -280,4 +266,18 @@ p {
 
 }
 
- 
+.menu-background {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 800;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
