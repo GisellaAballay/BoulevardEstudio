@@ -9,18 +9,17 @@ const toggleBtn = document.getElementById("toggleButton");
     })
 
 // Imagen de fondo dinámica
-const menuItems = document.querySelectorAll('.submenu');
-const background = document.querySelector('.menu-background');
+const submenus = document.querySelectorAll('.submenu');
 
-menuItems.forEach(item => {
-  const image = item.getAttribute('data-img');
+submenus.forEach(submenu => {
+  const image = submenu.getAttribute('data-img');
+  const megaMenu = submenu.querySelector('.mega-menu')
   
-  item.addEventListener('mouseenter', () => {
-    background.style.backgroundImage = `url(${image})`;
-    background.style.opacity ='0.5';
+  submenu.addEventListener('mouseenter', () => {
+    megaMenu.style.backgroundImage = `url(${image})`;
   });
 
-  item.addEventListener('mouseleave', () => {
-    background.style.opacity = '0';
+  submenu.addEventListener('mouseleave', () => {
+    megaMenu.style.backgroundImage = '';
   });
 });
