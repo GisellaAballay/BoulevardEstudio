@@ -16,8 +16,9 @@ header{
   color: var(--text-light);
   padding: 1rem 2rem;
   position: sticky;
+  width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 2000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -28,6 +29,7 @@ header h1{
   text-transform: uppercase;
   display: inline-block;
 }
+
 
 body {
   background-color: var(--bg-dark);
@@ -74,6 +76,8 @@ p {
 .logoCompleto{
   width: 20%;
   height: 10%;
+  position: relative;
+  z-index: 1001;
 }
 
 .logoCorto{
@@ -81,15 +85,14 @@ p {
 }
 
 .menu-logo{
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 1002;
   display: none;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .logo-responsive{
-  height: 40px;
+  height: 50px;
+  width: auto;
 }
 
 .navbar {
@@ -108,6 +111,10 @@ p {
   justify-content: center;
 }
 
+.navbar__list li {
+  position: relative;
+}
+
 .list__item a {
   color: var(--text-light);
   text-decoration: none;
@@ -115,6 +122,7 @@ p {
   position: relative;
   padding: 0.5rem 0;
   transition: color 0.3s;
+  z-index: 1000;
 }
 
 .list__item a:hover {
@@ -123,16 +131,11 @@ p {
 
 /* SUBMENU */
 .submenu__item {
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  /* position: absolute;
-  background: red;
-  padding: 1rem;
-  list-style: none;
-  top: 100%;
-  left: 0;
-  min-width: 200px; */
+  text-align: center;
 }
 
 .submenu:hover .submenu__item {
@@ -144,7 +147,7 @@ p {
 }
 
 .submenu__item li a {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--text-light);
   text-decoration: none;
@@ -182,39 +185,39 @@ p {
 
 /* MEGAMENU */
 .mega-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
   width: 100vw;
-  height: 70vh;
-  overflow: hidden;
-  transition: opacity 0.5s ease;
-  z-index: 900;
-  opacity: 0;
-  pointer-events: none;
+  height: 80vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+   /* debajo del navbar cuando está abierto, pero visible */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(-100%); /* al principo el menu está fuera de la pantalla, en el margen derecho*/
 }
 
+.submenu:hover .mega-menu {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0); /* El mega menú se desplaza desde el borde derecho hacia la pantalla */
+}
+/* Contenido interno del mega menu */
 .mega-menu__content {
   background-color: rgba(0, 0, 0, 0.6);
   color: var(--text-light);
-  padding: 2rem;
+  width: 100%;
   height: 100%;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 150px;
 }
 
-.submenu:hover .mega-menu {
-  height: 70vh;
-  opacity: 1;
-  pointer-events: all;
-  display: block;
-}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -269,6 +272,15 @@ p {
 
   .menu-logo{
     display: block;
+    position: static;
+    top: 1rem;
+    left: 1rem;
+    z-index: auto;
+  }
+
+  .logoCompleto{
+    position: relative;
+    z-index: 100;
   }
 
 }
