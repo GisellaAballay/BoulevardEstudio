@@ -74,25 +74,14 @@ p {
 
 /* BARRA DE NAVEGACION */
 .logoCompleto{
-  width: 20%;
-  height: 10%;
+  width: 17%;
+  height: 7%;
   position: relative;
   z-index: 1001;
 }
 
-.logoCorto{
-  height: 50px;
-}
-
-.menu-logo{
+.logoResponsive{
   display: none;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.logo-responsive{
-  height: 50px;
-  width: auto;
 }
 
 .navbar {
@@ -106,6 +95,7 @@ p {
 .navbar__list {
   list-style: none;
   display: flex;
+  margin-top: 16px;
   gap: 2rem;
   background-color: var(--green-accent);
   justify-content: center;
@@ -117,6 +107,8 @@ p {
 
 .list__item a {
   color: var(--text-light);
+  font-size: 1rem;
+  text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
   position: relative;
@@ -270,13 +262,15 @@ p {
     content: "X";
   }
 
-  .menu-logo{
+  .logoResponsive {
     display: block;
-    position: static;
+    position: absolute;
+    height: 8vh;
+    width: 10vw;
     top: 1rem;
-    left: 1rem;
-    z-index: auto;
-  }
+    left: 2rem;
+    z-index: 1002;
+  } 
 
   .logoCompleto{
     position: relative;
