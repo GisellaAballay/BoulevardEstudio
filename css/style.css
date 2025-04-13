@@ -12,9 +12,6 @@
 }
 
 header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: var(--green-accent);
   color: var(--text-light);
   padding: 1rem 2rem;
@@ -179,23 +176,6 @@ p {
   font-size: 2rem;
 }
 
-/* BOTÓN HAMBURGUESA */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.menu-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background: #fff;
-  transition: all 0.3s ease;
-}
-
 /* MEGAMENU */
 .mega-menu {
   position: absolute;
@@ -210,7 +190,7 @@ p {
   pointer-events: none;
 }
 
-/* .mega-menu__content {
+.mega-menu__content {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 2rem;
@@ -220,7 +200,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-} */
+}
 
 .submenu:hover .mega-menu {
   height: 70vh;
@@ -229,7 +209,7 @@ p {
   display: block;
 }
 /* FONDO CAMBIANTE */
-.menu-background {
+/* .menu-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -241,7 +221,7 @@ p {
   pointer-events: none;
   transition: opacity 0.4s ease;
   z-index: 0;
-}
+} */
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -298,11 +278,6 @@ p {
     display: block;
   }
 
-
 }
 
  
-
-
-
-

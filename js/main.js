@@ -1,11 +1,12 @@
 // Menú hamburguesa
-const toggleButton = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
 
-toggleButton.addEventListener('click', () => {
-  menu.classList.toggle('open');
-  toggleButton.classList.toggle('open');
-});
+const toggleBtn = document.getElementById("toggleButton");
+    const navList = document.getElementById("navList");
+
+    toggleBtn.addEventListener("click", () => {
+      navList.classList.toggle("show");
+      toggleBtn.classList.toggle("active");
+    })
 
 // Imagen de fondo dinámica
 const menuItems = document.querySelectorAll('.menu-item');
