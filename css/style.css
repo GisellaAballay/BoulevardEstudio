@@ -196,7 +196,7 @@ details[open] summary::before {
 }
 
 /* "Muestras de escenarios" div styling */
-#muestrasescenarios > .container > div {
+.summers > .container > div, #muestrasescenarios > .container > div{
   background-color: #1e2d1e;
   padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
@@ -336,6 +336,7 @@ footer form input[type="submit"]:hover {
     margin: 1rem 0;
     font-size: 1rem;
   }
+
   footer form {
     padding: 1rem;
     margin: 1rem;
