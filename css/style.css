@@ -80,10 +80,6 @@ p {
   z-index: 1001;
 }
 
-.logoResponsive{
-  display: none;
-}
-
 .navbar {
   float: right;
   background-color: var(--green-accent);
@@ -209,7 +205,6 @@ p {
   align-items: center;
   padding-top: 150px;
 }
-
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
