@@ -1,11 +1,13 @@
 :root{
   --bg-dark: #0a0a0a;
   --green-accent: #1a572f;
+  --green-light: #4CAF50; /* Lighter green for hover effects */
   --text-light: #f0f0f0;
   --hover-yellow: #fd0;
   --green-military: #3b4d3a;
   --section-bg: #121212;
 }
+
 
 *{
   margin: 0;
@@ -16,12 +18,12 @@
 header{
   background-color: var(--green-accent);
   color: var(--text-light);
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   position: sticky;
   width: 100%;
   top: 0;
   z-index: 2000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 header h1{
@@ -34,7 +36,7 @@ header h1{
 body {
   background-color: var(--bg-dark);
   color: var(--text-light);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 5px;
 }
@@ -56,12 +58,14 @@ h3, h4, h5 {
 
 /* Títulos principales */
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
   color: var(--hover-yellow);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   text-transform: uppercase;
   border-bottom: 2px solid var(--green-accent);
   display: inline-block;
+  line-height: 1.2;
 }
 
 /* Secciones específicas */
@@ -91,6 +95,10 @@ p {
 
 /* Animación de entrada sutil */
 section {
+  padding: 4rem 2rem;
+  background-color: var(--section-bg);
+  border-radius: 8px;
+  margin: 2rem 0;
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease;
@@ -99,4 +107,44 @@ section {
 section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+button {
+  background-color: var(--green-accent);
+  color: var(--text-light);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--green-light); /* Change background on hover */
+}
+
+footer {
+  background-color: var(--green-military);
+  color: var(--text-light);
+  padding: 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--text-light);
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--hover-yellow); /* Change color on hover */
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
 }

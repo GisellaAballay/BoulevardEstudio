@@ -1,8 +1,11 @@
 :root{
   --bg-dark: #0a0a0a;
   --green-accent: #1a572f;
+  --green-light: #4CAF50; /* Lighter green for hover effects */
   --text-light: #f0f0f0;
   --hover-yellow: #fd0;
+  --green-military: #3b4d3a;
+  --section-bg: #121212;
 }
 
 /* BARRA DE NAVEGACION */
@@ -47,7 +50,8 @@
 }
 
 .list__item a:hover {
-  color: var(--hover-yellow);
+  color: var(--green-light);
+  text-decoration: underline;
 }
 
 /* SUBMENU */
