@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/modal.css">
   <title>Boulevard Estudio</title>
 </head>
 <body>
@@ -31,7 +33,7 @@
     <button class="navbar-toggle" id="toggleButton" aria-label="Abrir menú">
       <span class="icon-bar"></span>
     </button>
-    <img src="./assets/img/Logo Blvd sin fondo negro.png" alt="logo responsive" class="logoResponsive">
+    <!-- <img src="./assets/img/Logo Blvd sin fondo negro.png" alt="logo responsive" class="logoResponsive"> -->
     <nav class="navbar" id="navbar">  
       
       <ul class="navbar__list" id="navList">
@@ -116,7 +118,8 @@
   <main>
     <h1>Estudio de danza</h1>
     <section id="aboutme">
-      <h2>Sobre mi</h2>
+      <div class="container">
+        <h2>Sobre mi</h2>
       <article>
         <h4>Nuestra Historia</h4>
         <p>
@@ -148,20 +151,22 @@
           Profe 3:
         </p>
       </article>
+      </div>
     </section>
     <section id="capacitacion">
-      <h2>Capacitación</h2>
+      <div class="container">
+        <h2>Capacitación</h2>
         <article class="infantiles">
           <h3>Infantiles</h3>
             <div>
-              <h4>Programa Pre-formacion de danza</h4>
+              <h2>Programa Pre-formacion de danza</h2>
               <h5>De 3 a 6 años</h5>
                 <p>
                   Este es el primer paso para que los más peques donde descubran el mundo de la danza de manera divertida y creativa.
                   A través del juego, la música y el movimiento, desarrollan coordinación, expresión corporal y amor por el baile, preparándose para el Programa de Formación.
                   ¡Un espacio lleno de ritmo, alegría y aprendizaje!
                 </p>
-              <h4>Programa de formación de danza</h4>
+              <h2>Programa de formación de danza</h2>
                 <h5>Carrera de danza con título: <i>"Intérprete en danza escénica"</i></h5>
                 <p>
                   <!-- Introducción -->
@@ -201,7 +206,7 @@
               <button>Más info.</button>
             </div>
             <div>
-              <h4>Urbano kids</h4>
+              <h2>Urbano kids</h2>
               <p>
                 Llevamos el ritmo, la creatividad y la diversión a otro nivel con clases de danza urbana para kids. 
                 Con movimientos dinámicos, coreografías modernas y un ambiente lleno de emoción, desarrollando confianza, coordinación y expresión mientras disfrutan de la música que más les gusta.
@@ -213,7 +218,7 @@
           <!-- Horarios y Aranceles? -->
         </article>
         <article class="adultos">
-          <h3>Adultos</h3>
+          <h2>Adultos danza</h2>
           <p>Nunca es tarde para empezar a bailar
 
             La danza no tiene edad, solo ganas de moverse, expresarse y disfrutar. Nuestras clases para adultos están diseñadas para que te animes a descubrir (o redescubrir) el placer de bailar, sin importar tu experiencia previa.
@@ -226,7 +231,7 @@
           <button>Más info.</button>
         </article>
         <article class="summers">
-          <h4>Summers</h4>
+          <h2>Summers</h2>
           <div>
             <h6>1º Edición</h6>
           </div>
@@ -245,9 +250,11 @@
 
           <button>Más info.</button>
         </article>
+      </div>
     </section>
     <section id="muestrasescenarios">
-      <h4>Muestras coreográficas</h4>
+      <div class="container">
+        <h2>Muestras coreográficas</h2>
         <div>
           <h5>Muestra Sauté</h5>
         </div>
@@ -263,6 +270,7 @@
           Año 2025
           <h5>Memorias para llevar</h5>
         </div>
+      </div>
     </section>
   </main>
   <footer>
